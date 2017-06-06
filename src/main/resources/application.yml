@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  context-path: /router-filter-demo
+
+
+logging:
+  level:
+    root: INFO
+
+
+zuul:
+  ssl-hostname-validation-enabled: false
+  sensitive-headers:
