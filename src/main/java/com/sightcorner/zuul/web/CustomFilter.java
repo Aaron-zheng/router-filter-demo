@@ -2,8 +2,11 @@ package com.sightcorner.zuul.web;
 
 
 import com.netflix.zuul.ZuulFilter;
+import com.netflix.zuul.context.RequestContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.servlet.http.HttpServletRequest;
 
 public class CustomFilter extends ZuulFilter {
 
@@ -35,12 +38,21 @@ public class CustomFilter extends ZuulFilter {
     @Override
     public boolean shouldFilter() {
         LOGGER.info("进入 CustomFilter 的 shouldFilter");
+        //如果为true，则进入run方法
         return true;
     }
 
     @Override
     public Object run() {
         LOGGER.info("进入 CustomFilter 的 run");
+        //自己的逻辑
+        RequestContext requestContext = RequestContext.getCurrentContext();
+        HttpServletRequest httpServletRequest = requestContext.getRequest();
+        LOGGER.info("httpServletRequest.getContextPath(): " + httpServletRequest.getContextPath());
+        LOGGER.info("httpServletRequest.getRequestURI(): " + httpServletRequest.getRequestURI());
+        LOGGER.info("httpServletRequest.getRequestURL(): " + httpServletRequest.getRequestURL());
+        //执行
+
         return null;
     }
 }

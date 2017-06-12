@@ -1,10 +1,13 @@
+#当stripPrefix=true的时候 （http://127.0.0.1:8181/api/user/list -> http://192.168.1.100:8080/user/list）
+#当stripPrefix=false的时候（http://127.0.0.1:8181/api/user/list -> http://192.168.1.100:8080/api/user/list）
+
 -
-  id: application1
-  path: /application1/say1
-  url: http://www.baidu1.com/
-  stripPrefix: false
+  id: application-id-1
+  path: /application-1/**
+  url: https://www.baidu.com/
+  stripPrefix: true
 -
-  id: application2
-  path: /application2/say2
-  url: http://www.google.com/
-  stripPrefix: false
+  id: application-id-2
+  path: /application-2/**
+  url: http://www.baidu.com/
+  stripPrefix: true

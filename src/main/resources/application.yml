@@ -1,6 +1,18 @@
 server:
   port: 8080
   context-path: /router-filter-demo
+  session:
+    timeout: 3600
+  ssl:
+    enabled: true
+    keyStore: classpath:certificate/zuul.p12
+    keyStoreType: pkcs12
+    keyStorePassword: 775417
+    keyPassword: 775417
+    clientAuth: need
+    trustStore: classpath:certificate/ca.jks
+    trustStoreType: jks
+    trustStorePassword: 106075
 
 
 logging:
