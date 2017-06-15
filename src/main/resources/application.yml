@@ -3,16 +3,16 @@ server:
   context-path: /router-filter-demo
   session:
     timeout: 3600
-  ssl:
-    enabled: true
-    keyStore: classpath:certificate/zuul.p12
-    keyStoreType: pkcs12
-    keyStorePassword: 775417
-    keyPassword: 775417
-    clientAuth: need
-    trustStore: classpath:certificate/ca.jks
-    trustStoreType: jks
-    trustStorePassword: 106075
+#  ssl:
+#    enabled: true
+#    keyStore: classpath:certificate/x.p12
+#    keyStoreType: pkcs12
+#    keyStorePassword: x
+#    keyPassword: x
+#    clientAuth: need
+#    trustStore: classpath:certificate/x.jks
+#    trustStoreType: jks
+#    trustStorePassword: x
 
 
 logging:
