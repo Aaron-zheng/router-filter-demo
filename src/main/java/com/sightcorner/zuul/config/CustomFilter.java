@@ -1,4 +1,4 @@
-package com.sightcorner.zuul.web;
+package com.sightcorner.zuul.config;
 
 
 import com.netflix.zuul.ZuulFilter;

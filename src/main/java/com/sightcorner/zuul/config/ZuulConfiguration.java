@@ -2,8 +2,6 @@ package com.sightcorner.zuul.config;
 
 
 import com.netflix.zuul.ZuulFilter;
-import com.sightcorner.zuul.web.CustomFilter;
-import com.sightcorner.zuul.web.CustomLocator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
